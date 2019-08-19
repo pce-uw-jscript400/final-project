@@ -1,7 +1,10 @@
+//Environment variables from nodemon.json
 const { CLIENT_BASE_URL, NODE_ENV, PORT } = process.env
 const express = require('express')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+
+
 const app = express()
 
 // Connection to MongoDB Atlas
@@ -14,8 +17,16 @@ if (NODE_ENV === 'development') {
 app.use(bodyParser.json())
 
 
-// Attach token to request
-// app.use(require('./api/middleware/set-token'))
+//Setting mytoken to be the value of Bearer Token passed in request header
+app.use((req, res, next) => {
+  try {
+    req.mytoken = req.headers.authorization.split('Bearer ')[1]
+    next()
+  } catch (_e) {
+    req.mytoken = null
+    next()
+  }
+})
 
 
 app.use(require('cors')({
@@ -27,7 +38,7 @@ app.use(require('cors')({
 app.use('/api/v1', require('./api/routes/auth'))
 app.use('/api/v1/users', require('./api/routes/users'))
 //This line was pulled from the solutions branch
-// app.use('/api/users/:userId/posts', require('./api/routes/posts'))
+app.use('/api/v1/users/:userId/assignments', require('./api/routes/assignments'))
 
 
 // Not Found Handler
