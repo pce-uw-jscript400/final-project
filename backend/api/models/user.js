@@ -1,4 +1,4 @@
-const mongoose = require('mongosse')
+const mongoose = require('mongoose')
 const Assignment = require('./assignment')
 //again using the validator package because I don't feel like enforcing all the new TLDs
 const isEmail = require('validator/lib/isEmail')

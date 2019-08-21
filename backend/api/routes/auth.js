@@ -1,4 +1,4 @@
-const router = require('express')
+const router = require('express').Router()
 const bcrypt = require('bcrypt')
 const User = require('../models/user')
 const { decodeToken, generateToken } = require('../lib/token')
@@ -51,3 +51,5 @@ router.post('/signup', isNewUser, isValidPassword, async (req, res, next) => {
     const token = generateToken(user._id)
     res.status(status).json({ status, token})
 })
+
+module.exports = router

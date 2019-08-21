@@ -18,6 +18,17 @@ const schema = new mongoose.Schema({
     },
     description: {
         type: String
+    },
+    grade: {
+        type: Number,
+        //will this work?
+        validate: {
+            validator: grade => grade <= this.max,
+            message: props => `${props} must be less than ${this.max}`
+        }
+    },
+    max: {
+        type: Number
     }
 })
 
