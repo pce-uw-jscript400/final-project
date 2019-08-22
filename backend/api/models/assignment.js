@@ -1,34 +1,40 @@
 const mongoose = require('mongoose')
-
 const isURL = require('validator/lib/isURL')
 
 
 const schema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
-        required: true
+        required: [true, 'Assignment Title is required!']
     },
     link: {
         type: String,
-        required: true,
+        required: [true, 'Project Link is required!'],
         validate: {
             validator: isURL,
             message: props => `${props} is not a valid URL!`
         }
     },
     description: {
-        type: String
+        type: String,
+        required: [true, 'Project Description is required!']
     },
-    grade: {
+    score: {
         type: Number,
-        //will this work?
+        min: [0, 'You must enter a positive integer value'],
+        max: [this.maxScore, 'Your grade '],
         validate: {
-            validator: grade => grade <= this.max,
-            message: props => `${props} must be less than ${this.max}`
+            validator: Number.isInteger,
+            message: 'You must enter a positive integer value'
         }
     },
-    max: {
-        type: Number
+    maxScore: {
+        type: Number,
+        min: [0, 'You must enter a positive integer value'],
+        validate: {
+            validator: Number.isInteger,
+            message: 'You must enter a positive integer value'
+        }
     }
 })
 

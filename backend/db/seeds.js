@@ -3,25 +3,30 @@ const mongoose = require('mongoose')
 const config = require('../nodemon.json')
 const User = require('../api/models/user')
 
+//TO DO: add 7 more students and assignments
+
 const reset = async () => {
     mongoose.connect(config.env.MONGO_DB_CONNECTION, {useNewUrlParser: true})
     await User.deleteMany()
-    return User.create([
+    const admin = await User.create([
         {
             firstName:'The',
             lastName:'Professor',
-            password: bcrypt.hash('hardpassword', 10),
-            email:'professor@school.edu',
+            password: bcrypt.hashSync('password', 10),
+            email:'admin@email.com',
             admin: true
-        },
+        }
+    ])
+
+    const students = await User.create([
         {
             firstName:'Tim',
             lastName:'Willis',
-            password: bcrypt.hash('password', 10),
+            password: bcrypt.hashSync('password', 10),
             email: 'timwillis@email.com',
             assignments: [
                 {
-                    name: 'CSS Grid project',
+                    title: 'CSS Grid project',
                     link: 'https://github.com/timwillis/project',
                     description: 'This is a project I did'
                 }
@@ -30,32 +35,36 @@ const reset = async () => {
         {
             firstName: 'Wim',
             lastName: 'Tillis',
-            password: bcrypt.hash('password', 10),
+            password: bcrypt.hashSync('password', 10),
             email: 'wimtillis@gmail.com',
             assignments: [
                 {
-                    name: 'CSS Flexbox Project',
-                    link: 'http://github.com/wimtillis/projectflexbox'
+                    title: 'CSS Flexbox Project',
+                    link: 'http://github.com/wimtillis/projectflexbox',
+                    description: 'This is a project I did'
                 }
             ]
         },
         {
             firstName: 'John',
             lastName: 'Smith',
-            password: bcrypt.hash(password, 10),
-            email: 'johnsmith@gmail.com',
+            password: bcrypt.hashSync('password', 10),
+            email: 'student@email.com',
             assignments:[
                 {
-                    name: `John Smith's Project`,
-                    link: 'https://github.com/johnsmith/project'
+                    title: `John Smith's Project`,
+                    link: 'https://github.com/johnsmith/project',
+                    description: 'This is a project I did'
                 }
             ]
         }
     ])
+
+    return {admin, students}
 }
 
 reset().catch(console.error).then((response) => {
-    console.log(`Seeds successful! ${response.length} users created.`)
+    console.log(`Seeds successful! ${response.admin.length} admin created, ${response.students.length} students created.`)
     return mongoose.disconnect()
-  })
+})
   

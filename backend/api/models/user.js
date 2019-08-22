@@ -7,23 +7,24 @@ const isEmail = require('validator/lib/isEmail')
 const schema = new mongoose.Schema({
     firstName: {
         type: String,
-        required: true
+        required: [true, 'First Name is required!']
     },
     lastName: {
         type: String,
-        required: true
+        required: [true, 'Last Name is required!']
     },
     email: {
         type: String,
-        required: true,
+        required: [true, 'Email address is required!'],
         validate: {
             validator: isEmail,
-            message: props => `${props.value} is not a valid email address`
+            message: props => `'${props.value}' is not a valid email address`
         }
     },
     password: {
         type: String,
         required: true,
+        minlength: [8, 'Password must be at least 8 characters!']
     },
     admin: {
         type: Boolean,

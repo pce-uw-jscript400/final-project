@@ -2,23 +2,11 @@ const User = require('../models/user')
 const { decodeToken } = require('../lib/token')
 
 const isNewUser = async (req, _res, next) => {
-    const { username } = req.body
+    const { email } = req.body
     
-    const alreadyExists = await User.findOne({ username })
+    const alreadyExists = await User.findOne({ email })
     if(alreadyExists){
-        const message = `${username} already exists`
-        const error = new Error(message)
-        error.status = 400
-        return next(error)
-    }
-    next()
-}
-
-const isValidPassword = (req, _res, next) => {
-    const { password } = req.body
-
-    if (password.length < 8) {
-        const message = `Password must be at least 8 characters`
+        const message = `${email} already exists`
         const error = new Error(message)
         error.status = 400
         return next(error)
@@ -57,4 +45,15 @@ const isSameUser = (req, _res, next) => {
     next(error)
 }
 
-module.exports = {isNewUser, isValidPassword, isLoggedIn, isSameUser}
+const isAdmin = async (req, _res, next) => {
+    const { id }  = decodeToken(req.token)
+    const user = await User.findById(id)
+    if (user.admin) return next()
+
+    const message = `You are not allowed to access this route.`
+    const error = new Error(message)
+    error.status = 401
+    next(error)
+    
+}
+module.exports = { isNewUser, isLoggedIn, isSameUser, isAdmin}

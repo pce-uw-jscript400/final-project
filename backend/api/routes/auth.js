@@ -3,12 +3,15 @@ const bcrypt = require('bcrypt')
 const User = require('../models/user')
 const { decodeToken, generateToken } = require('../lib/token')
 
-const { isNewUser, isValidPassword } = require('../middleware/auth')
+const { isNewUser } = require('../middleware/auth')
+
+const { validate } = require('../middleware/users')
 
 router.get('/profile', async (req, res, next) => {
     try {
         const payload = decodeToken(req.token)
-        const user = await User.findOne({_id: payload.id}).select('-__v password')
+        console.log(payload.id)
+        const user = await User.findOne({_id: payload.id}).select('-__v -password')
 
         const status = 200
         res.json({status, user})
@@ -22,8 +25,8 @@ router.get('/profile', async (req, res, next) => {
 })
 
 router.post('/login', async (req, res, next) => {
-    const { username, password } = req.body
-    const user = await User.findOne({username})
+    const { email, password } = req.body
+    const user = await User.findOne({email})
 
     if(user) {
         const valid = await bcrypt.compare(password, user.password)
@@ -31,7 +34,7 @@ router.post('/login', async (req, res, next) => {
             const status = 200
             const response = 'You are logged in'
             const token = generateToken(user._id)
-            return res.status(status).json({ status, message, token })
+            return res.status(status).json({ status, response, token })
         }
     }
 
@@ -41,15 +44,19 @@ router.post('/login', async (req, res, next) => {
     next(error)
 })
 
-router.post('/signup', isNewUser, isValidPassword, async (req, res, next) => {
-    const { username, password } = req.body
+router.post('/signup', validate, isNewUser, async (req, res, next) => {
+    const { email, password, firstName, lastName } = req.body
     const rounds = 10
     const hashed = await bcrypt.hash(password, rounds)
 
     const status = 201
-    const user = await User.create({username, password: hashed})
+
+    const user = await User.create({firstName, lastName, email, password: hashed})
+
     const token = generateToken(user._id)
     res.status(status).json({ status, token})
+
+
 })
 
 module.exports = router
