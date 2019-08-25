@@ -32,6 +32,35 @@ const schema = new mongoose.Schema({
     },
     assignments: [Assignment]
 
-}, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } })
+}, {
+    timestamps: { 
+        createdAt: 'created_at', 
+        updatedAt: 'updated_at' 
+    },
+    toJSON: {
+        virtuals: true
+    },
+    toObject: {
+        virtuals: true
+    },
+    id: false
+})
+
+schema.virtual('grade').get(function() {
+    if (this.assignments) {
+        const graded = this.assignments.filter(assignment => assignment.score)
+        if (graded.length !== 0) {
+            const score = graded.reduce(
+                (accumulator, assignment) => {
+                    accumulator.score = (accumulator.score || 0) + assignment.score
+                    accumulator.maxScore = (accumulator.maxScore || 0) + assignment.maxScore
+                    return accumulator
+                },{}
+            )
+            return (score.score / score.maxScore).toFixed(2) * 100
+        }
+    }
+})
+
 
 module.exports = mongoose.model('User', schema)

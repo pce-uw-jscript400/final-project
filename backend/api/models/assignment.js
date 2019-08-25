@@ -12,7 +12,7 @@ const schema = new mongoose.Schema({
         required: [true, 'Project Link is required!'],
         validate: {
             validator: isURL,
-            message: props => `${props} is not a valid URL!`
+            message: `Specified link is not a valid URL!`
         }
     },
     description: {
@@ -22,7 +22,7 @@ const schema = new mongoose.Schema({
     score: {
         type: Number,
         min: [0, 'You must enter a positive integer value'],
-        max: [this.maxScore, 'Your grade '],
+        max: this.maxScore,
         validate: {
             validator: Number.isInteger,
             message: 'You must enter a positive integer value'

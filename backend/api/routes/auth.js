@@ -1,18 +1,17 @@
 const router = require('express').Router()
 const bcrypt = require('bcrypt')
 const User = require('../models/user')
+
 const { decodeToken, generateToken } = require('../lib/token')
+const { isNewUser, isValidToken } = require('../middleware/auth')
+const { validateUser } = require('../middleware/users')
 
-const { isNewUser } = require('../middleware/auth')
-
-const { validate } = require('../middleware/users')
-
-router.get('/profile', async (req, res, next) => {
+router.get('/profile', isValidToken, async (req, res, next) => {
     try {
         const payload = decodeToken(req.token)
-        console.log(payload.id)
-        const user = await User.findOne({_id: payload.id}).select('-__v -password')
 
+        const user = await User.findOne({_id: payload.id}).select('firstName lastName email assignments')
+        
         const status = 200
         res.json({status, user})
     } catch (e) {
@@ -44,7 +43,7 @@ router.post('/login', async (req, res, next) => {
     next(error)
 })
 
-router.post('/signup', validate, isNewUser, async (req, res, next) => {
+router.post('/signup', validateUser, isNewUser, async (req, res, next) => {
     const { email, password, firstName, lastName } = req.body
     const rounds = 10
     const hashed = await bcrypt.hash(password, rounds)

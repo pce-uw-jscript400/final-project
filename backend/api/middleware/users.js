@@ -1,6 +1,6 @@
 const User = require('../models/user')
 
-const validate = async (req, _res, next) => {
+const validateUser = async (req, _res, next) => {
   try {
     const user = new User(req.body)
     await user.validate()
@@ -11,4 +11,9 @@ const validate = async (req, _res, next) => {
   }
 }
 
-module.exports = { validate }
+const removeAdmins = async (req, _res, next) => {
+  req.query.admin = false
+  next()
+}
+
+module.exports = { validateUser, removeAdmins }
