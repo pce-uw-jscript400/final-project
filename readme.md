@@ -14,8 +14,8 @@ Please fill in these links once you have completed the project. If you need help
 
 This checklist is meant to be a useful guide for you in determining what you have left to do.
 
-- [ ] I have added my Frontend Repository link above
-- [ ] I have added my Backend Repository link above
+- [x] I have added my Frontend Repository link above
+- [x] I have added my Backend Repository link above
 - [ ] I have completed the requirements of the [Signup](#Signup) page
 - [ ] I have completed the requirements of the [Login](#Login) page
 - [ ] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
