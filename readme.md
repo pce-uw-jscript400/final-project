@@ -6,8 +6,8 @@ This is the final project for the JSCRIPT 400, Backend Web Development Course.
 
 Please fill in these links once you have completed the project. If you need help writing Markdown, you can refer to [this document](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-* [Frontend Repository]()
-* [Backend Repository]()
+* [Frontend Repository](https://github.com/wedge1126/jscript-400-final-project-frontend)
+* [Backend Repository](https://github.com/wedge1126/jscript-400-final-project-backend)
 * [Deployed Frontend]()
 
 ## Project Checklist
