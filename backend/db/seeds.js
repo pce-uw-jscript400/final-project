@@ -3,8 +3,6 @@ const mongoose = require('mongoose')
 const config = require('../nodemon.json')
 const User = require('../api/models/user')
 
-//TO DO: add 7 more students and assignments
-
 const reset = async () => {
     mongoose.connect(config.env.MONGO_DB_CONNECTION, {useNewUrlParser: true})
     await User.deleteMany()

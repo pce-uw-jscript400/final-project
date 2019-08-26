@@ -10,7 +10,7 @@ router.get('/profile', isValidToken, async (req, res, next) => {
     try {
         const payload = decodeToken(req.token)
 
-        const user = await User.findOne({_id: payload.id}).select('firstName lastName email assignments')
+        const user = await User.findOne({_id: payload.id}).select('firstName lastName email assignments admin')
         
         const status = 200
         res.json({status, user})
@@ -32,7 +32,7 @@ router.post('/login', async (req, res, next) => {
         if(valid){
             const status = 200
             const response = 'You are logged in'
-            const token = generateToken(user._id)
+            const token = generateToken(user._id, user.admin)
             return res.status(status).json({ status, response, token })
         }
     }
