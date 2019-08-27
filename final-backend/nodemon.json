@@ -1,0 +1,8 @@
+{
+  "env": {
+    "MONGO_DB_CONNECTION": "mongodb+srv://alycia:R0xieP00p@general-purpose-tewk7.mongodb.net/final?retryWrites=true&w=majority",
+    "NODE_ENV": "development",
+    "PORT": 5000,
+    "SECRET_KEY": "iliketurtles"
+  }
+}
