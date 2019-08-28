@@ -1,3 +1,8 @@
 mockups/mockups.bmpr
 node_modules/
 .vscode
+
+nodemon.json
+temp/
+
+now.json
