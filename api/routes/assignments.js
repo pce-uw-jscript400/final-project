@@ -32,7 +32,7 @@ router.get('/:assignmentId', loggedInUser, sameUser, (req, res, next) => {
   User.findById(req.params.userId)
   .then((user) => {
     const status = 201
-    
+
     const assignment = user.assignments.id(req.params.assignmentId)
 
     console.log(assignment)
@@ -95,11 +95,11 @@ router.put('/:assignmentId', loggedInUser, sameUser, (req, res, next) => {
     assignment.received = received
     assignment.score = score
 
-    user.save()
-
+    return user.save()
+  })
+  .then(user => {
     const message = `You have successfully updated an assignment information.`
     res.status(status).json({ status, message, user })
-
   })
   .catch((error) => {
     //Error handling
