@@ -18,12 +18,235 @@ const reset = async () => {
         {
           title: 'HTML & CSS Final Project',
           description: 'My final project for the HTML & CSS course.',
-          link: 'http://www.marnelmangrubang.me',
-          received: 99,
-          score:100
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
         }
       ],
-      totalgrade: 69,
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Breanna',
+      lastname: 'McGrath',
+      email: 'breanna.mcgrath@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'My final project for the HTML & CSS course.',
+          link: 'http://www.breannamcgrath.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Macy',
+      lastname: 'Humphries',
+      email: 'mhumphries@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'My final project for the HTML & CSS course.',
+          link: 'http://www.mhumphries.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Ivor',
+      lastname: 'Davison',
+      email: 'ivor.davison@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'My finalproject. Sorry this is late!!!',
+          link: 'http://www.ivor.davison.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Daanyal',
+      lastname: 'Ventura',
+      email: 'daanventura@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'My final project for the HTML & CSS course.',
+          link: 'http://www.daanventura.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Tyson',
+      lastname: 'Atherton',
+      email: 'tyson.atherton@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'This was so fun to work on!',
+          link: 'http://www.tyson.atherton.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Chris',
+      lastname: 'Curtis',
+      email: 'chris.curtis@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'This was so fun to work on!',
+          link: 'http://www.tyson.atherton.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Steven',
+      lastname: 'Turner',
+      email: 'steven.turner@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'This was so fun to work on!',
+          link: 'http://www.tyson.atherton.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Heather',
+      lastname: 'Campbell',
+      email: 'heather.campbell@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'This was so fun to work on!',
+          link: 'http://www.tyson.atherton.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
+      admin: false
+    },
+    {
+      firstname: 'Jane',
+      lastname: 'Buck',
+      email: 'jane.buck@email.com',
+      password: bcrypt.hashSync('password', 10),
+      assignments: [
+        {
+          title: 'HTML & CSS Final Project',
+          description: 'This was so fun to work on!',
+          link: 'http://www.tyson.atherton.com',
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
+        }
+      ],
+      totalgrade: 0,
       admin: false
     },
     {
@@ -36,11 +259,18 @@ const reset = async () => {
           title: 'HTML & CSS Final Project',
           description: 'Final Project assignment from Student',
           link: 'http://www.student.com',
-          received: 79,
-          score:100
+          received: 0,
+          score:0
+        },
+        {
+          title: 'Flexbox Exercise',
+          description: 'An exercise for working with Flexbox.',
+          link: 'https://randomuser.me/',
+          received: 0,
+          score:0
         }
       ],
-      totalgrade: 59,
+      totalgrade: 0,
       admin: false
     },
     {

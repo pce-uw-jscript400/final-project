@@ -47,7 +47,7 @@ router.get('/:userId', loggedInUser, (req, res, next) => {
 })
 
 
-//UPDATE individual user's info
+//UPDATE Individual user's info
 router.put('/:userId', loggedInUser, sameUser, (req, res, next) => {
   const status = 200
 
@@ -67,7 +67,7 @@ router.put('/:userId', loggedInUser, sameUser, (req, res, next) => {
 })
 
 
-//DELETE a user
+//DELETE a single user
 router.delete('/:userId', loggedInUser, sameUser, (req, res, next) => {
   const status = 200
 
@@ -85,7 +85,6 @@ router.delete('/:userId', loggedInUser, sameUser, (req, res, next) => {
   })
 
 })
-
 
 
 

@@ -1,8 +1,9 @@
 const { SECRET_KEY } = process.env
-const jwt = require('jsonwebtoken')
+const { sign } = require('jsonwebtoken')
 
-module.exports = (id) => {
-  const payload = { id }
-  const options = { expiresIn: '1 day' }
-  return jwt.sign(payload, SECRET_KEY, options)
+module.exports = (id, admin, firstname) => {
+  const payload = { id, admin, firstname }
+  console.log(payload)
+  const options = { expiresIn: '2 day' }
+  return sign(payload, SECRET_KEY, options)
 }

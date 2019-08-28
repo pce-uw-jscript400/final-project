@@ -1,6 +1,6 @@
 const { SECRET_KEY } = process.env
-const jwt = require('jsonwebtoken')
+const {verify} = require('jsonwebtoken')
 
 module.exports = (token) => {
-  jwt.verify(token, SECRET_KEY)
+  return verify(token, SECRET_KEY)
 }
