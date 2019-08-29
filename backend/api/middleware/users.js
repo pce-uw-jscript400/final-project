@@ -6,6 +6,9 @@ const validateUser = async (req, _res, next) => {
     await user.validate()
     next()
   } catch (e) {
+    Object.keys(e.errors).forEach((key) =>{
+      console.log(key)
+    })
     e.status = 422
     return next(e)
   }

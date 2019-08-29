@@ -13,6 +13,13 @@ const validateAssignment = async (req, _res, next) => {
   }
 }
 
+const onlyScoringData = async (req, _res, next) => {
+  const { score, maxScore } = req.body
+
+  req.body = {score, maxScore}
+  next()
+}
+
 const noScoringData = async (req, _res, next) => {
   const { score, maxScore } = req.body
 
@@ -24,4 +31,4 @@ const noScoringData = async (req, _res, next) => {
   return next(error)
 }
 
-module.exports = { validateAssignment, noScoringData }
+module.exports = { validateAssignment, noScoringData, onlyScoringData }
