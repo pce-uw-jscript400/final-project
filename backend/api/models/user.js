@@ -21,9 +21,8 @@ const schema = mongoose.Schema({
     admin: {
         type: Boolean,
         default: false
-    }
-    //,
-    //assignments: [Assignment]
+    },
+    assignments: [Assignment]
 }, { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } })
 
 module.exports = mongoose.model('User', schema)

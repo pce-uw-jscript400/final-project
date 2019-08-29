@@ -9,10 +9,10 @@ router.post('/', isLoggedIn, isSameUser, async (req, res, next) => {
   const query = { _id: userId }
   const user = await User.findOne(query)
 
-  user.posts.push(req.body)
+  user.assignments.push(req.body)
   await user.save()
 
-  const post = user.posts[user.posts.length - 1]
+  const post = user.assignments[user.assignments.length - 1]
   res.status(status).json({ status, response: post })
 })
 
@@ -22,11 +22,12 @@ router.put('/:postId', isLoggedIn, isSameUser, async (req, res, next) => {
   const { postId, userId } = req.params
   const query = { _id: userId }
   const user = await User.findOne(query)
-  const post = user.posts.id(postId)
+  const post = user.assignments.id(postId)
 
-  const { content, emotion } = req.body
-  post.content = content
-  post.emotion = emotion
+  const { title, link, description } = req.body
+  post.title = title
+  post.link = link
+  post.description = description
   await user.save()
 
   res.status(status).json({ status, response: post })
@@ -39,7 +40,7 @@ router.delete('/:postId', isLoggedIn, isSameUser, async (req, res, next) => {
   const query = { _id: userId }
   const user = await User.findOne(query)
 
-  user.posts = user.posts.filter(post => post.id !== postId)
+  user.assignments = user.assignments.filter(post => post.id !== postId)
   await user.save()
 
   res.json({ status, response: user })
