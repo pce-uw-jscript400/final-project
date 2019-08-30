@@ -28,9 +28,9 @@ This checklist is meant to be a useful guide for you in determining what you hav
 - [x] I have completed the requirements of the [Logout](#Logout) page
 - [x] I have added my Deployed Frontend link above
 - [x] I have removed any commented out code from both of my repositories
-- [ ] I have submitted my project on Canvas
-- [ ] I have created 10 or more students on my deployed site
-- [ ] I have created at least one assignment for each student on my deployed site
+- [x] I have submitted my project on Canvas
+- [x] I have created 10 or more students on my deployed site
+- [x] I have created at least one assignment for each student on my deployed site
 - [x] I have created a student user with the email `student@email.com` and the password `password` and have tested logging in with it
 - [x] I have created an admin user with the email `admin@email.com` and the password `password` and have tested logging in with it
 
