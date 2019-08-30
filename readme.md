@@ -8,7 +8,7 @@ Please fill in these links once you have completed the project. If you need help
 
 * [Frontend Repository](https://github.com/Alexlied/final-project-frontend)
 * [Backend Repository](https://github.com/Alexlied/final-project/backend)
-* [Deployed Frontend]()
+* [Deployed Frontend](https://final-project-frontend.alexlied.now.sh)
 
 ## Project Checklist
 
@@ -16,23 +16,23 @@ This checklist is meant to be a useful guide for you in determining what you hav
 
 - [x] I have added my Frontend Repository link above
 - [x] I have added my Backend Repository link above
-- [ ] I have completed the requirements of the [Signup](#Signup) page
-- [ ] I have completed the requirements of the [Login](#Login) page
-- [ ] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
-- [ ] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
-- [ ] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
+- [x] I have completed the requirements of the [Signup](#Signup) page
+- [x] I have completed the requirements of the [Login](#Login) page
+- [x] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
+- [x] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
+- [x] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
 - [ ] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
 - [ ] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
 - [ ] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
 - [ ] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
-- [ ] I have completed the requirements of the [Logout](#Logout) page
-- [ ] I have added my Deployed Frontend link above
-- [ ] I have removed any commented out code from both of my repositories
-- [ ] I have submitted my project on Canvas
-- [ ] I have created 10 or more students on my deployed site
-- [ ] I have created at least one assignment for each student on my deployed site
-- [ ] I have created a student user with the email `student@email.com` and the password `password` and have tested logging in with it
-- [ ] I have created an admin user with the email `admin@email.com` and the password `password` and have tested logging in with it
+- [x] I have completed the requirements of the [Logout](#Logout) page
+- [x] I have added my Deployed Frontend link above
+- [x] I have removed any commented out code from both of my repositories
+- [x] I have submitted my project on Canvas
+- [x] I have created 10 or more students on my deployed site
+- [x] I have created at least one assignment for each student on my deployed site
+- [x] I have created a student user with the email `student@email.com` and the password `password` and have tested logging in with it
+- [x] I have created an admin user with the email `admin@email.com` and the password `password` and have tested logging in with it
 
 ## Goal
 
