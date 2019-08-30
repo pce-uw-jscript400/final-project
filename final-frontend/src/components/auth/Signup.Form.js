@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router'
 
-class Form extends React.Component {
+class SignUpForm extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -31,17 +31,17 @@ class Form extends React.Component {
       <main className='container'>
       <section className='row justify-content-md-center'>
       <div className='col col-lg-5'>
-          <h1>Login</h1>
+          <h1>Signup</h1>
       <form onSubmit={this.handleSubmit}>
         <div className='form-group'>
-          <label htmlFor='username'>Username</label>
+          <label htmlFor='email'>Email</label>
           <input
             className='form-control'
-            id='username'
+            id='email'
             onChange={this.handleChange}
-            name='username'
-            type='text'
-            value={this.state.username}
+            name='email'
+            type='email'
+            value={this.state.email}
             required />
         </div>
         <div className='form-group'>

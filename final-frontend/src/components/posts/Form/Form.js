@@ -4,8 +4,8 @@ export default class Form extends React.Component {
   constructor (props) {
     super(props)
     const { post = {} } = this.props
-    const { content = '', emotion = '' } = post
-    this.state = { content, emotion }
+    const { description = '', title = '', link='' } = post
+    this.state = { description, title, link }
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -31,24 +31,35 @@ export default class Form extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className='form-group'>
-          <label htmlFor='emotion'>Emotion</label>
+          <label htmlFor='title'>Title</label>
           <input
             className='form-control'
-            id='emotion'
+            id='title'
             onChange={this.handleChange}
-            name='emotion'
+            name='title'
             type='text'
-            value={this.state.emotion} />
+            value={this.state.title} />
         </div>
         <div className='form-group'>
-          <label htmlFor='content'>Content</label>
+          <label htmlFor='description'>Description</label>
           <textarea
             className='form-control'
-            id='content'
+            id='description'
             onChange={this.handleChange}
-            name='content'
+            name='description'
             type='text'
-            value={this.state.content}
+            value={this.state.description}
+            required />
+        </div>
+        <div className='form-group'>
+          <label htmlFor='link'>Link</label>
+          <textarea
+            className='form-control'
+            id='link'
+            onChange={this.handleChange}
+            name='link'
+            type='link'
+            value={this.state.description}
             required />
         </div>
         <button type='submit' className='btn btn-primary'>Submit</button>

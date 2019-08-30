@@ -30,20 +30,21 @@ class App extends React.Component {
 
   async componentDidMount () {
     if (token.getToken()) {
-      const { user } = await auth.profile();
-      this.setState({ user, currentUserId: user._id, loading: false });
+      const { response } = await auth.profile();
+      this.setState({currentUserId: response._id, loading: false });
     } else {
-      this.setState({ loading: false })
+     this.setState({ loading: false })
     }
   }
 
   async loginUser (user) {
     try{
-      const response = await auth.login(user)
-      await token.setToken(response)
-      const profile = await auth.profile()
-      this.setState({ user: profile.user, currentUserId: profile.user._id })
+      const loginResponse = await auth.login(user)
+      await token.setToken(loginResponse)
+      const {response} = await auth.profile()
+      this.setState({ currentUserId: response._id })
     }catch(e){
+      throw e;
         alert("There was a problem with your login information")
     }
   }
@@ -51,7 +52,6 @@ class App extends React.Component {
   async editUser (user) {
     const response = await auth.login(user)
     await token.setToken(response)
-
     const profile = await auth.profile()
     this.setState({ user: profile.user, currentUserId: profile.user._id })
   }
@@ -85,13 +85,13 @@ class App extends React.Component {
           logoutUser={this.logoutUser} />
         <Switch>
           <Route path='/login' exact component={() => {
-            return currentUserId ? <Redirect to='/users' /> : <Login onSubmit={this.loginUser} />
+            return currentUserId ? <Redirect to='/students' /> : <Login onSubmit={this.loginUser} />
           }} />
           <Route path='/signup' exact component={() => {
-            return currentUserId ? <Redirect to='/users' /> : <Signup onSubmit={this.signupUser} />
+            return currentUserId ? <Redirect to='/students' /> : <Signup onSubmit={this.signupUser} />
           }} />
 
-          <Route path='/users' render={() => {
+          <Route path='/students' render={() => {
             return currentUserId
               ? <UsersContainer currentUserId={currentUserId} />
               : <Redirect to='/login' />

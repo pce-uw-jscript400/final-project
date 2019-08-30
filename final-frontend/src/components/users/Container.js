@@ -7,7 +7,6 @@ import * as users from '../../api/users'
 // Components
 import List from './List/List'
 import PostsContainer from '../posts/Container'
-import EditUser from './Edit.Form'
 
 
 export default class Container extends React.Component {
@@ -19,7 +18,6 @@ export default class Container extends React.Component {
     }
 
     this.refreshUsers = this.refreshUsers.bind(this)
-    this.edit = this.edit.bind(this)
   }
 
   async componentDidMount () {
@@ -28,13 +26,8 @@ export default class Container extends React.Component {
 
   // Internal
   async refreshUsers () {
-    const { response } = await users.fetchUsers()
+    const { response } = await users.fetchStudents()
     this.setState({ users: response })
-  }
-
-  async edit(name){
-    //console.log(`ALYLOG:${JSON.stringify(name)}`)
-    const{ response } = await users.updateUsername({ user: { _id: this.props.currentUserId }, name })
   }
 
   render () {
@@ -44,10 +37,7 @@ export default class Container extends React.Component {
 
     return (
       <main className='container'>
-        <Route path='/users' exact component={() => <List users={users} />} />
-        <Route path='/users/:userId/edit' exact component={() => {
-          return <EditUser onSubmit={this.edit} />
-        }} />
+        <Route path='/students' exact component={() => <List users={users} />} />
         <PostsContainer
           currentUserId={currentUserId}
           refreshUsers={this.refreshUsers}

@@ -5,7 +5,7 @@ class Form extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      username: '',
+      email: '',
       password: ''
     }
 
@@ -20,22 +20,23 @@ class Form extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault()
+    console.log(JSON.stringify(this.state))
     this.props.onSubmit(this.state)
-      .then(() => this.props.history.push('/users'))
+      .then(() => this.props.history.push('/students'))
   }
 
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className='form-group'>
-          <label htmlFor='username'>Username</label>
+          <label htmlFor='email'>Email</label>
           <input
             className='form-control'
-            id='username'
+            id='email'
             onChange={this.handleChange}
-            name='username'
+            name='email'
             type='text'
-            value={this.state.username}
+            value={this.state.email}
             required />
         </div>
         <div className='form-group'>
