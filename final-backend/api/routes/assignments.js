@@ -8,7 +8,7 @@ const ObjectId = require('mongoose').Types.ObjectId
 
 const excludeKeys = '-__v -password'
 
-router.post('/new', isLoggedIn, setToken, async (req, res, next) => {
+router.post('/new', isLoggedIn, async (req, res, next) => {
     try{
         const status = 200
         let newAssignment = req.body
@@ -46,6 +46,26 @@ router.put('/:assignmentId/edit', isLoggedIn, isSameUser, async (req, res, next)
       next(error)
     }
 
+  })
+
+  router.delete('/', isLoggedIn, async (req, res, next) => {
+    try{
+      const status = 200
+      let payload = decodeToken(req.token)
+      let  id = payload._id
+      let user = await User.findById(id)
+      let assignment = user.assignments.id(req.body)
+      assignment.remove()
+      await user.save()
+      let response = `Deleted ${assignment.name}`
+      res.json({ status, response})
+    }catch(e){
+      const status = 400
+      console.log(`Error: ${e.message}`)
+      const response = 'There was an error';
+      return res.status(status).json(response)
+      next(e)
+    }
   })
 
 module.exports = router

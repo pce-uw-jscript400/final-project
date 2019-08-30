@@ -7,7 +7,3 @@ module.exports = (req, _res, next) => {
     next()
   }
 }
-
-//Middlewear token, pulls from the header
-//We define the token and attach a key
-//Attaches the token to other routes

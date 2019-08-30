@@ -8,7 +8,7 @@ const isLoggedIn = (req, _res, next) => {
   }
   try {
     decodeToken(req.token)
-    console.log(req.token)
+    // console.log(req.token)
     next()
   } catch (e) {
     console.error(e)
@@ -19,7 +19,7 @@ const isLoggedIn = (req, _res, next) => {
 }
 
 const isSameUser = (req, _res, next) => {
-  const id = req.params.userId
+  //const id = req.params.userId - no params
   const payload = decodeToken(req.token)
   if (payload.id === id) return next()
   const error = new Error(`You are not authorized to access this route.`)

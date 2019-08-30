@@ -2,7 +2,6 @@ const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
 const config = require('../nodemon.json')
 const User = require('../api/models/user')
-//const assignments = require('../api/models/assignment')
 
 const reset = async () => {
   mongoose.connect(config.env.MONGO_DB_CONNECTION, { useNewUrlParser: true })
@@ -19,7 +18,8 @@ const reset = async () => {
           title: 'My First Assigment',
           link: 'https:www.myfirstassignment.com',
           description: 'This is my first assignment',
-          grade: 68
+          grade: 68,
+          outOf: 100
         }
       ]
     },
@@ -29,6 +29,36 @@ const reset = async () => {
       lastName: 'User',
       password: bcrypt.hashSync('password', 10),
       teacher: true
+    },
+    {
+      email: 'roxie@email.com',
+      firstName: 'Roxie',
+      lastName: 'User',
+      password: bcrypt.hashSync('password', 10),
+      teacher: false,
+      assignments: [
+        {
+          title: 'My First Assigment',
+          link: 'www.roxiedog.com/assignmentone',
+          description: 'This is my first assignment',
+          grade: 72,
+          outOf: 100
+        },
+        {
+          title: 'My Second Assignment',
+          link: 'www.roxiedog.com/assignmenttwo',
+          description: 'This is my second assignment',
+          grade: 90,
+          outOf: 100
+        },
+        {
+          title: 'My Third Assignment',
+          link: 'www.roxiedog.com/assignmentthree',
+          description: 'This is my third assignment',
+          grade: 48,
+          outOf: 50
+        }
+      ]
     }
   ])
 }
