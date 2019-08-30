@@ -8,7 +8,7 @@ Please fill in these links once you have completed the project. If you need help
 
 * [Frontend Repository](https://github.com/crgriffiths/js400-final-frontend)
 * [Backend Repository](https://github.com/crgriffiths/js400-final-backend)
-* [Deployed Frontend]()
+* [Deployed Frontend](https://js400-final-frontend.colinrossgriffiths.now.sh/)
 
 ## Project Checklist
 
@@ -18,15 +18,15 @@ This checklist is meant to be a useful guide for you in determining what you hav
 - [X] I have added my Backend Repository link above
 - [x] I have completed the requirements of the [Signup](#Signup) page
 - [x] I have completed the requirements of the [Login](#Login) page
-- [ ] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
-- [ ] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
-- [ ] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
-- [ ] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
-- [ ] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
-- [ ] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
-- [ ] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
+- [x] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
+- [x] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
+- [x] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
+- [x] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
+- [x] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
+- [x] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page (half)
+- [x] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page (half)
 - [x] I have completed the requirements of the [Logout](#Logout) page
-- [ ] I have added my Deployed Frontend link above
+- [x] I have added my Deployed Frontend link above
 - [ ] I have removed any commented out code from both of my repositories
 - [ ] I have submitted my project on Canvas
 - [ ] I have created 10 or more students on my deployed site
