@@ -59,7 +59,9 @@ router.get('/', isLoggedIn, async (req, res, next) => {
 
 router.get('/profile', isLoggedIn, async (req, res, next) => {
   const status = 200
-  const response = await User.findWithId(req.token._id)
+  const payload = decodeToken(req.token)
+  const id = payload.id
+  const response = await User.findById(id)
   res.json({ status, response })
 })
 
