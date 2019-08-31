@@ -6,18 +6,24 @@ This is the final project for the JSCRIPT 400, Backend Web Development Course.
 
 Please fill in these links once you have completed the project. If you need help writing Markdown, you can refer to [this document](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-* [Frontend Repository]()
-* [Backend Repository]()
+* [Whole Project Repo](https://github.com/Jackiesan/assignment-tracker)
+* [Frontend Repository](https://github.com/Jackiesan/assignment-tracker/tree/master/frontend)
+* [Backend Repository](https://github.com/Jackiesan/assignment-tracker/tree/master/backend)
+
+Could not deploy the frontend
 * [Deployed Frontend]()
 
 ## Project Checklist
 
 This checklist is meant to be a useful guide for you in determining what you have left to do.
 
-- [ ] I have added my Frontend Repository link above
-- [ ] I have added my Backend Repository link above
-- [ ] I have completed the requirements of the [Signup](#Signup) page
-- [ ] I have completed the requirements of the [Login](#Login) page
+- [x] I have added my Frontend Repository link above
+- [x] I have added my Backend Repository link above
+- [x] I have completed the requirements of the [Signup](#Signup) page
+- [x] I have completed the requirements of the [Login](#Login) page
+
+All of these requirements were done in the backend. However, I didn't have enough time to create separate views for admin and students. Sorry!
+
 - [ ] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
 - [ ] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
 - [ ] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
