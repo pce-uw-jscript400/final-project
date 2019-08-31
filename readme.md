@@ -8,7 +8,7 @@ Please fill in these links once you have completed the project. If you need help
 
 * [Frontend Repository](https://github.com/Jiansorge/final-project-front-end)
 * [Backend Repository](https://github.com/Jiansorge/final-project-back-end)
-* [Deployed Frontend]()
+* [Deployed Frontend](https://final-frontend.jiansorge.now.sh/)
 
 ## Project Checklist
 
@@ -26,7 +26,7 @@ This checklist is meant to be a useful guide for you in determining what you hav
 - [] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
 - [9] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
 - [X] I have completed the requirements of the [Logout](#Logout) page
-- [ ] I have added my Deployed Frontend link above
+- [?] I have added my Deployed Frontend link above
 - [ ] I have removed any commented out code from both of my repositories
 - [X] I have submitted my project on Canvas
 - [X] I have created 10 or more students on my deployed site
