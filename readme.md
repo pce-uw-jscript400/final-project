@@ -6,22 +6,22 @@ This is the final project for the JSCRIPT 400, Backend Web Development Course.
 
 Please fill in these links once you have completed the project. If you need help writing Markdown, you can refer to [this document](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-* [Frontend Repository]()
-* [Backend Repository]()
+* [Frontend Repository](https://github.com/bbarth86/final-frontend)
+* [Backend Repository](https://github.com/bbarth86/final-backend)
 * [Deployed Frontend](https://final-frontend.bbarth86.now.sh)
 
 ## Project Checklist
 
 This checklist is meant to be a useful guide for you in determining what you have left to do.
 
-- [ ] I have added my Frontend Repository link above
-- [ ] I have added my Backend Repository link above
-- [P] I have completed the requirements of the [Signup](#Signup) page
-- [P] I have completed the requirements of the [Login](#Login) page
-- [P] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
-- [C] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
-- [C] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
-- [P] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
+- [x] I have added my Frontend Repository link above
+- [x] I have added my Backend Repository link above
+- [x] I have completed the requirements of the [Signup](#Signup) page
+- [x] I have completed the requirements of the [Login](#Login) page
+- [x] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
+- [x] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
+- [x] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
+- [x] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
 - [ ] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
 - [ ] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
 - [ ] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
