@@ -22,9 +22,9 @@ This checklist is meant to be a useful guide for you in determining what you hav
 - [x] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
 - [x] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
 - [x] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
-- [ ] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
-- [ ] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
-- [ ] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
+- [x] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
+- [x] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
+- [x] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
 - [x] I have completed the requirements of the [Logout](#Logout) page
 - [x] I have added my Deployed Frontend link above
 - [x] I have removed any commented out code from both of my repositories
