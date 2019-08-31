@@ -8,7 +8,7 @@ Please fill in these links once you have completed the project. If you need help
 
 * [Frontend Repository](https://github.com/drubini90/grading-tool-frontend)
 * [Backend Repository](https://github.com/drubini90/grading-tool-backend)
-* [Deployed Frontend]()
+* [Deployed Frontend](https://grading-tool-frontend.drubini.now.sh/)
 
 ## Project Checklist
 
