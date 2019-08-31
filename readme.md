@@ -1,3 +1,7 @@
+#My Comments
+
+This app will not render due to a final-straw error.  It was working and when I made a change it stopped, when I rolled back the change it still did not work and that left me with about 4 hours of spinning wheels tring to figout what went wrong. In the military we have a term call "Cut slingload" that is when you release cargo before it causes greater damage.. that is where I am for this project.  Which I guess has been the theme of the w6 home work and this final, a lot of trouble shooting for a seeming endless supply of issues.  I dedicated 40 hours over a period of 1 1/2 weeks to this project and the bulk was fighting the program and every success lead to two more errors. I think I did accomplish a lot, but no where near completion, I did learn a lot, I just wish this was more focused on node and not react.  Thanks for everything, and best to the future
+
 # Final Project
 
 This is the final project for the JSCRIPT 400, Backend Web Development Course.
@@ -6,8 +10,8 @@ This is the final project for the JSCRIPT 400, Backend Web Development Course.
 
 Please fill in these links once you have completed the project. If you need help writing Markdown, you can refer to [this document](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-* [Frontend Repository]()
-* [Backend Repository]()
+* [Frontend Repository](https://github.com/jaamp/final-fe)
+* [Backend Repository](https://github.com/jaamp/final-be)
 * [Deployed Frontend]()
 
 ## Project Checklist
@@ -16,23 +20,23 @@ This checklist is meant to be a useful guide for you in determining what you hav
 
 - [ ] I have added my Frontend Repository link above
 - [ ] I have added my Backend Repository link above
-- [ ] I have completed the requirements of the [Signup](#Signup) page
-- [ ] I have completed the requirements of the [Login](#Login) page
-- [ ] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
-- [ ] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
-- [ ] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
+- [] I have completed the requirements of the [Signup](#Signup) page
+- [] I have completed the requirements of the [Login](#Login) page
+- [] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
+- [] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
+- [] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
 - [ ] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
-- [ ] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
-- [ ] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
-- [ ] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
-- [ ] I have completed the requirements of the [Logout](#Logout) page
+- [] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
+- [] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
+- [] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
+- [] I have completed the requirements of the [Logout](#Logout) page
 - [ ] I have added my Deployed Frontend link above
 - [ ] I have removed any commented out code from both of my repositories
 - [ ] I have submitted my project on Canvas
-- [ ] I have created 10 or more students on my deployed site
-- [ ] I have created at least one assignment for each student on my deployed site
-- [ ] I have created a student user with the email `student@email.com` and the password `password` and have tested logging in with it
-- [ ] I have created an admin user with the email `admin@email.com` and the password `password` and have tested logging in with it
+- [] I have created 10 or more students on my deployed site
+- [] I have created at least one assignment for each student on my deployed site
+- [] I have created a student user with the email `student@email.com` and the password `password` and have tested logging in with it
+- [] I have created an admin user with the email `admin@email.com` and the password `password` and have tested logging in with it
 
 ## Goal
 
