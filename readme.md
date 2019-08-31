@@ -6,26 +6,26 @@ This is the final project for the JSCRIPT 400, Backend Web Development Course.
 
 Please fill in these links once you have completed the project. If you need help writing Markdown, you can refer to [this document](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
-* [Frontend Repository]()
-* [Backend Repository]()
+* [Frontend Repository](https://github.com/drubini90/grading-tool-frontend)
+* [Backend Repository](https://github.com/drubini90/grading-tool-backend)
 * [Deployed Frontend]()
 
 ## Project Checklist
 
 This checklist is meant to be a useful guide for you in determining what you have left to do.
 
-- [ ] I have added my Frontend Repository link above
-- [ ] I have added my Backend Repository link above
-- [ ] I have completed the requirements of the [Signup](#Signup) page
-- [ ] I have completed the requirements of the [Login](#Login) page
-- [ ] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
-- [ ] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
-- [ ] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
-- [ ] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
-- [ ] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
-- [ ] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
-- [ ] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
-- [ ] I have completed the requirements of the [Logout](#Logout) page
+- [X] I have added my Frontend Repository link above
+- [X] I have added my Backend Repository link above
+- [X] I have completed the requirements of the [Signup](#Signup) page
+- [X] I have completed the requirements of the [Login](#Login) page
+- [X] I have completed the requirements of the [Home (Student View)](#Home-Student-View) page
+- [X] I have completed the requirements of the [All Students (Student View)](#All-Students-Student-View) page
+- [X] I have completed the requirements of the [Create New Assignment](#Create-New-Assignment) page
+- [X] I have completed the requirements of the [Edit Assignment](#Edit-Assignment) page
+- [X] I have completed the requirements of the [All Students (Admin View)](#All-Students-Admin-View) page
+- [X] I have completed the requirements of the [Ungraded Assignments](#Ungraded-Assignments) page
+- [X] I have completed the requirements of the [Graded Assignments](#Graded-Assignments) page
+- [X] I have completed the requirements of the [Logout](#Logout) page
 - [ ] I have added my Deployed Frontend link above
 - [ ] I have removed any commented out code from both of my repositories
 - [ ] I have submitted my project on Canvas
