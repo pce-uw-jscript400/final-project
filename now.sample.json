@@ -14,7 +14,7 @@
     }
   ],
   "env": {
-    "CLIENT_BASE_URL": "https://<name>.<username>.now.sh",
+    "CLIENT_BASE_URL": "https://<name>.<username>.vercel.app",
     "MONGO_DB": "",
     "NODE_ENV": "production",
     "SECRET_KEY": ""
